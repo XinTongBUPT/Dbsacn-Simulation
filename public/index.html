@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Basketball Analysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/bb.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Basketball Analysis">
+    <link rel="apple-touch-icon-precomposed" href="images/bb.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/bb.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+    <link rel="stylesheet" href="resources/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="player.js"></script>
+    <script src="echarts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
     <script defer src="/__/firebase/6.1.0/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/6.1.0/firebase-auth.js"></script>
@@ -14,52 +45,155 @@
     <script defer src="/__/firebase/6.1.0/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<body>
+
+    <div class="ct" id="t1">
+        <div class="ct" id="t2">
+            <div class="ct" id="t3">
+                <div class="ct" id="t4">
+                    <div class="ct" id="t5">
+                        <ul id="menu">
+                            <a href="#t1"><li class="icon fa fa-dribbble" id="uno"></li></a>
+                            <a href="#t2"><li class="icon fa fa-user" id="dos"></li></a>
+                            <a href="#t3"><li class="icon fa fa-star" id="tres"></li></a>
+                            <a href="#t4"><li class="icon fa fa-signal" id="cuatro"></li></a>
+                            <a href="#t5"><li class="icon fa fa-xxx" id="cinco"></li></a>
+                        </ul>
+                        <div class="page" id="p1">
+                            <section class="icon fa fa-dribbble">
+                                <span class="title">Data Visualization</span>
+                                <span class="project_name">DBSCAN Visualization</span>
+                                <span class="hint">By:</span>
+                                <span class="hint">Manshan Lin, Xin Tong</span>
+                            </section>  
+                        </div>
+                        <div class="page" id="p2">
+                            <div>
+                                <br></br>
+                                <h2 style="width: 720px;height:500px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application</h2>
+                                <div id="details" class="details"></div>
+                            </div>
+                        </div>
+                        <div class="page" id="p3">
+                            
+                            <div>
+                                <br></br>
+                                <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algorithm</h2>
+                                <br/><br/>
+                                <div class="wrapper">
+                                    <div></div>
+                                    <div id="detailsone" class="detailsone">
+                                        <br/><br/><br/><br/><br/>
+                                        <div>Partitioning methods (K-means, PAM clustering) and hierarchical clustering are suitable for finding spherical-shaped clusters or convex clusters. In other words, they work well for compact and well separated clusters. Moreover, they are also severely affected by the presence of noise and outliers in the data.</div>
+                                        <div>The plot above contains 5 clusters and outliers, including:</div>
+                                        <div>2 ovales clusters</div>
+                                        <div>2 linear clusters</div>
+                                        <div>1 compact cluster</div>
+                                        <div>Given such data, k-means algorithm has difficulties for identifying theses clusters with arbitrary shape.</div>
+                                        <div>We know there are 5 five clusters in the data, but it can be seen that k-means method inaccurately identify the 5 clusters.</div>
+                                    </div>
+                                    <div>
+                                      <img id="imgone" src="./data/img1.png" width=550 height=550>
+                                      <button id="btnone" onclick=changeURL() >K-means Clustering</button>
+                                    </div>
+
+                                    <div></div>
+                                    <div id="detailstwo" class="detailstwo">
+                                        <br/>
+                                        <br/>
+                                        <div>The basic idea behind density-based clustering approach is derived from a human intuitive clustering method.</div>
+                                        <div>For instance, by looking at the figure below, one can easily identify four clusters along with several points of noise, because of the differences in the density of points.</div>
+                                    </div>
+                                    <div><img id="imgtwo" src="./data/img8.png" width=550 height=200></div>
+
+                                    <div></div>
+                                    <div id="detailsthree" class="detailsthree">
+                                        <br/><br/><br/><br/>
+                                        <div>As illustrated in the figure, clusters are dense regions in the data space, separated by regions of lower density of points. In other words, the density of points in a cluster is considerably higher than the density of points outside the cluster (“areas of noise”).</div>
+                                        <div>DBSCAN is based on this intuitive notion of “clusters” and “noise”. The key idea is that for each point of a cluster, the neighborhood of a given radius has to contain at least a minimum number of points.</div>
+                                        <br/>
+                                        <div>DBSCAN works as such:</div>
+                                        <div>Divides the dataset into n dimensions</div>
+                                        <div>For each point in the dataset, DBSCAN forms an n dimensional shape around that data point, and then counts how many data points fall within that shape.</div>
+                                        <div>DBSCAN counts this shape as a cluster. DBSCAN iteratively expands the cluster, by going through each individual point within the cluster, and counting the number of other data points nearby. </div>
+                                    </div>
+                                    <div><img id="imgtwo" src="./data/img3.png" width=550 height=400></div>
+
+                                    <div></div>
+                                    <div><img id="imgtwo" src="./data/img4.png" width=350 height=270></div>
+                                    <div><img id="imgtwo" src="./data/img3.png" width=550 height=400></div>
+
+                                    <div></div>
+                                    <img id="imgone" src="./data/img2.png" width=550 height=550>
+                                    <img id="imgone" src="./data/img7.png" width=550 height=550>
+                                    <!-- It can be seen that DBSCAN performs better for these data sets and can identify the correct set of clusters compared to k-means algorithms. -->
+                                    
+                                    <!-- <div></div>
+                                    <div></div>
+                                    <img class="progressiveMedia-image js-progressiveMedia-image" data-src="https://cdn-images-1.medium.com/max/1600/1*tc8UF-h0nQqUfLC8-0uInQ.gif" src="https://cdn-images-1.medium.com/max/1600/1*tc8UF-h0nQqUfLC8-0uInQ.gif"> -->
+                                    
+                                    <div></div>
+                                    <div id="detailsfour" class="detailsfour">
+                                        <div>The left image depicts a more traditional clustering method, such as K-Means, that does not account for multi-dimensionality. Whereas the right image shows how DBSCAN can contort the data into different shapes and dimensions in order to find similar clusters. We also notice in the right image, that the points along the outer edge of the dataset are not classified, suggesting they are outliers amongst the data.</div>
+                                        <br/>
+                                        <div>Advantages of DBSCAN:</div>
+                                        <div>Is great at separating clusters of high density versus clusters of low density within a given dataset.</div>
+                                        <div>Is great with handling outliers within the dataset.</div>
+                                    </div>
+                                    <div><img id="imgtwo" src="./data/img6.png" width=550 height=220></div>
+                                    <div></div>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page" id="p4">
+                            <section class="icon fa fa-dribbble">
+                                <span class="title">Interesting Simulation</span>
+                                <a class="hint" href="file:///Users/xintong/Dbscan-Simulation/dbscan.html" />
+                                    Click here to access DBSCAN simulation
+                                </a>
+                            </section>
+                        </div>
+                        <div class="page" id="p5">
+                            <section class="icon fa fa-dribbble">
+                                <span class="title">More</span>
+                                <p class="hint">
+                                    <span>You love one page & CSS only stuff? </span><br/>
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
+
+
+    <!-- <script src="static/main.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        $(document).ready(function () {
+            $("#t2").on("click", function () {
+                console.log("here");
+                $("#target").load("../templates/player-attributes.html");
+            });
+            $("#t3").on("click", function () {
+                $("#target").load("../templates/player-attributes.html");
+            });
+            $("#t4").on("click", function () {
+                $("#target").load("../templates/player-attributes.html");
+            });
+        });
+        function changeURL(){
+          document.getElementById('imgone').src="./data/img2.png";
+          // document.getElementById('btnone').innerHTML="Original data"
         }
-      });
     </script>
-  </body>
+
+</body>
+
 </html>
