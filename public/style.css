@@ -49,7 +49,8 @@ body,
 
 #p1 {
     background: darkslateblue;
-/*             text-align: center; */
+    text-align:center;   /* 水平居中 */
+	line-height: 100px; 
 }
 
 #p2 {
@@ -107,7 +108,7 @@ ul .icon:hover {
 
 .page .icon .title {
     line-height: 2;
-    /* overflow: auto; */
+    overflow: auto;
 }
 
 #t2:target ul .icon,
@@ -171,7 +172,7 @@ a {
 }
 
 .hint {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 #p4 .hint {

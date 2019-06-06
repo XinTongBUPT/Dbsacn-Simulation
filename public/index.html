@@ -56,19 +56,18 @@
                 <div class="ct" id="t4">
                     <div class="ct" id="t5">
                         <ul id="menu">
-                            <a href="#t1"><li class="icon fa fa-dribbble" id="uno"></li></a>
-                            <a href="#t2"><li class="icon fa fa-user" id="dos"></li></a>
-                            <a href="#t3"><li class="icon fa fa-star" id="tres"></li></a>
-                            <a href="#t4"><li class="icon fa fa-signal" id="cuatro"></li></a>
+                            <a href="#t1"><li class="icon fa fa-signal" id="uno"></li></a>
+                            <a href="#t2"><li class="icon fa fa-question-circle" id="dos"></li></a>
+                            <a href="#t3"><li class="icon fa fa-list-alt" id="tres"></li></a>
+                            <a href="#t4"><li class="icon fa fa-magic" id="cuatro"></li></a>
                             <a href="#t5"><li class="icon fa fa-xxx" id="cinco"></li></a>
                         </ul>
                         <div class="page" id="p1">
-                            <section class="icon fa fa-dribbble">
-                                <span class="title">Data Visualization</span>
-                                <div >Exploring DBSCAN Cluster Algorithm</div>
-                                <span class="hint">By:</span>
-                                <span class="hint">Manshan Lin, Xin Tong</span>
-                            </section>  
+                            <section class="icon fa fa-signal">
+                                <span class="title">DBSCAN</span>
+                                <span class="hint">Exploring DBSCAN Cluster</span>
+                                <span class="hint">By: Manshan Lin, Xin Tong</span>
+                            </section> 
                         </div>
                         <div class="page" id="p2">
                             <div>
@@ -136,6 +135,7 @@
                             
                             <div>
                                 <br></br>
+                                <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Examples</h2>
                                 <br/><br/>
                                 <div class="wrapper">
                                     <div></div>
@@ -155,11 +155,8 @@
                                     </div>
 
                                     <div></div>
-                                    <div>
-                                        <img id="imgone" src="./data/img1.png" width=550 height=550>
-                                        <button id="btnone" onclick=change() >DBSCAN Clustering</button>
-                                    </div>
-                                    <img id="imgtwo" width=550 height=550>
+                                    <img src="./data/img1.png" width=550 height=550>
+                                    <img src="./data/img7.png" width=550 height=550>
                                     <!-- It can be seen that DBSCAN performs better for these data sets and can identify the correct set of clusters compared to k-means algorithms. -->
                                     
                                     <div></div>
@@ -190,7 +187,7 @@
                             </div>
                         </div>
                         <div class="page" id="p4">
-                            <section class="icon fa fa-dribbble">
+                            <section class="icon fa fa-magic">
                                 <span class="title">Interesting Simulation</span>
                                 <a class="hint" href="./dbscan.html" />
                                     Click here to access DBSCAN simulation
@@ -216,18 +213,6 @@
     <!-- <script src="static/main.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#t2").on("click", function () {
-                console.log("here");
-                $("#target").load("../templates/player-attributes.html");
-            });
-            $("#t3").on("click", function () {
-                $("#target").load("../templates/player-attributes.html");
-            });
-            $("#t4").on("click", function () {
-                $("#target").load("../templates/player-attributes.html");
-            });
-        });
         function changeURL(){
           document.getElementById('imgone').src="./data/img2.png";
           // document.getElementById('btnone').innerHTML="Original data"
