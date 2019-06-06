@@ -15,7 +15,7 @@ var newColor;
 
 function setup () {
   //creates a canvas for us to draw or display the output.
-  createCanvas(windowWidth, windowHeight - 60);
+  createCanvas(windowWidth, windowHeight - 50);
   createSpan("  |  ");
   createSpan("Epsilon : ");
   epsilonSlider = createSlider(0, 300, 90);

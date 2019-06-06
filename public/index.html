@@ -65,23 +65,77 @@
                         <div class="page" id="p1">
                             <section class="icon fa fa-dribbble">
                                 <span class="title">Data Visualization</span>
-                                <span class="project_name">DBSCAN Visualization</span>
+                                <div >Exploring DBSCAN Cluster Algorithm</div>
                                 <span class="hint">By:</span>
                                 <span class="hint">Manshan Lin, Xin Tong</span>
                             </section>  
                         </div>
                         <div class="page" id="p2">
                             <div>
-                                <br></br>
-                                <h2 style="width: 720px;height:500px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application</h2>
-                                <div id="details" class="details"></div>
+                                <!-- <br></br>
+                                <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application</h2> -->
+                                </br></br></br></br></br></br></br></br></br>
+                                <div class="wrapper">
+                                        <div></div>
+                                        <div id="detailstwo" class="detailstwo">
+                                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What is DBSCAN?</h2>
+                                            <br/>
+                                            <div>Density-based spatial clustering of applications with noise (DBSCAN) is a well-known data clustering algorithm that is commonly used in data mining and machine learning.</div>
+                                            <br/>
+                                            <div>Based on a set of points (let’s think in a bidimensional space as exemplified in the figure), DBSCAN groups together points that are close to each other based on a distance measurement (usually Euclidean distance) and a minimum number of points. It also marks as outliers the points that are in low-density regions.</div>
+                                        </div>
+                                        <div><br/>
+                                            <img id="paraimg" src="./data/DBSCAN_search－1.png" width=550 height=300>
+                                            <button id="btnone" onclick=paraImg() >DBSCAN Clustering</button>
+                                        </div>
+                                        
+                                        <!-- <div><img src="./data/img8.png" width=550 height=200></div> -->
+    
+                                        <div></div>
+                                        <div id="detailsthree" class="detailsthree">
+                                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Two Parameters</h2>
+                                            <br/>
+                                            <div>The DBSCAN algorithm basically requires 2 parameters:</div>
+                                            <br/>
+                                            <div>eps: specifies how close points should be to each other to be considered a part of a cluster. If the distance between two points is lower or equal to ‘eps’ then they are considered as neighbors.</div>
+                                            <div>minPoints: the minimum number of points to form a dense region.</div>
+                                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Three Data Points</h2>
+                                            <br/>
+                                            <div>Core Point: A point is a core point if it has more than MinPts points within eps.</div>
+                                            <br/>
+                                            <div>Border Point: A point which has fewer than MinPts within eps but it is in the neighborhood of a core point.</div>
+                                            <br/>
+                                            <div>Noise or outlier: A point which is not a core point or border point.</div>
+                                        </div>
+                                        <div></br></br></br><img id="imgtwo" src="./data/img3.png" width=550 height=400></div>
+    
+                                        <div></div>
+                                        <div>
+                                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Steps</h2>
+                                            <br/>
+                                            <div>DBSCAN algorithm can be abstracted in the following steps</div>
+                                            <br/>
+                                            <div>Find all the neighbor points within eps and identify the core points or visited with more than MinPts neighbors.</div>
+                                            <br/>
+                                            <div>For each core point if it is not already assigned to a cluster, create a new cluster.</div>
+                                            <br/>
+                                            <div>Find recursively all its density connected points and assign them to the same cluster as the core point.</div>
+                                            <br/>
+                                            <div>Iterate through the remaining unvisited points in the dataset. Those points that do not belong to any cluster are noise.</div>
+                                        </div>
+                                        <div><br/>
+                                            <img id="simuimg" src="./data/simu1.png" width=550 height=380>
+                                            <button id="btnone" onclick=simuImg() >DBSCAN Clustering</button>
+                                        </div>
+
+                                        <div></div>
+                                </div>
                             </div>
                         </div>
                         <div class="page" id="p3">
                             
                             <div>
                                 <br></br>
-                                <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algorithm</h2>
                                 <br/><br/>
                                 <div class="wrapper">
                                     <div></div>
@@ -101,36 +155,21 @@
                                     </div>
 
                                     <div></div>
-                                    <div id="detailstwo" class="detailstwo">
-                                        <br/>
-                                        <br/>
-                                        <div>The basic idea behind density-based clustering approach is derived from a human intuitive clustering method.</div>
-                                        <div>For instance, by looking at the figure below, one can easily identify four clusters along with several points of noise, because of the differences in the density of points.</div>
+                                    <div>
+                                        <img id="imgone" src="./data/img1.png" width=550 height=550>
+                                        <button id="btnone" onclick=change() >DBSCAN Clustering</button>
                                     </div>
-                                    <div><img id="imgtwo" src="./data/img8.png" width=550 height=200></div>
-
-                                    <div></div>
-                                    <div id="detailsthree" class="detailsthree">
-                                        <br/><br/><br/><br/>
-                                        <div>As illustrated in the figure, clusters are dense regions in the data space, separated by regions of lower density of points. In other words, the density of points in a cluster is considerably higher than the density of points outside the cluster (“areas of noise”).</div>
-                                        <div>DBSCAN is based on this intuitive notion of “clusters” and “noise”. The key idea is that for each point of a cluster, the neighborhood of a given radius has to contain at least a minimum number of points.</div>
-                                        <br/>
-                                        <div>DBSCAN works as such:</div>
-                                        <div>Divides the dataset into n dimensions</div>
-                                        <div>For each point in the dataset, DBSCAN forms an n dimensional shape around that data point, and then counts how many data points fall within that shape.</div>
-                                        <div>DBSCAN counts this shape as a cluster. DBSCAN iteratively expands the cluster, by going through each individual point within the cluster, and counting the number of other data points nearby. </div>
-                                    </div>
-                                    <div><img id="imgtwo" src="./data/img3.png" width=550 height=400></div>
-
-                                    <div></div>
-                                    <div><img id="imgtwo" src="./data/img4.png" width=350 height=270></div>
-                                    <div><img id="imgtwo" src="./data/img3.png" width=550 height=400></div>
-
-                                    <div></div>
-                                    <img id="imgone" src="./data/img2.png" width=550 height=550>
-                                    <img id="imgone" src="./data/img7.png" width=550 height=550>
+                                    <img id="imgtwo" width=550 height=550>
                                     <!-- It can be seen that DBSCAN performs better for these data sets and can identify the correct set of clusters compared to k-means algorithms. -->
                                     
+                                    <div></div>
+                                    <img src="./data/c1.png" width=550 height=520>
+                                    <img src="./data/c2.png" width=550 height=550>
+
+                                    <div></div>
+                                    <img src="./data/c3.png" width=550 height=520>
+                                    <img src="./data/c4.png" width=550 height=550>
+
                                     <!-- <div></div>
                                     <div></div>
                                     <img class="progressiveMedia-image js-progressiveMedia-image" data-src="https://cdn-images-1.medium.com/max/1600/1*tc8UF-h0nQqUfLC8-0uInQ.gif" src="https://cdn-images-1.medium.com/max/1600/1*tc8UF-h0nQqUfLC8-0uInQ.gif"> -->
@@ -143,7 +182,7 @@
                                         <div>Is great at separating clusters of high density versus clusters of low density within a given dataset.</div>
                                         <div>Is great with handling outliers within the dataset.</div>
                                     </div>
-                                    <div><img id="imgtwo" src="./data/img6.png" width=550 height=220></div>
+                                    <div><img id="imgone" src="./data/img6.png" width=550 height=220></div>
                                     <div></div>
                                     
 
@@ -192,6 +231,16 @@
         function changeURL(){
           document.getElementById('imgone').src="./data/img2.png";
           // document.getElementById('btnone').innerHTML="Original data"
+        }
+        function change(){
+          document.getElementById('imgtwo').src="./data/img7.png";
+          // document.getElementById('btnone').innerHTML="Original data"
+        }
+        function paraImg(){
+            document.getElementById('paraimg').src="./data/DBSCAN_search.gif";
+        }
+        function simuImg(){
+            document.getElementById('simuimg').src="./data/simu1.gif";
         }
     </script>
 
